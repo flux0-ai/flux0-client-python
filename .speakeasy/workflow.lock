@@ -2,32 +2,36 @@ speakeasyVersion: 1.513.4
 sources:
     FastAPI:
         sourceNamespace: fast-api
-        sourceRevisionDigest: sha256:f3b9b4715a3357678c18eff1d7444cff2349f5b48b7575e3c5a706cfa5a4694c
-        sourceBlobDigest: sha256:21d415d43a679b9cd15e82a8559838ff764fb3a1fd0cf5d539c7f7f27e98f8c5
+        sourceRevisionDigest: sha256:904f29ab3a64e4abba59fadc9960e37ca4057adde49ea2d50402f186c3ac132b
+        sourceBlobDigest: sha256:412702981ef9c0356c91f207bce2f2fc5563be1d25d50c2430c6946b2544272d
         tags:
             - latest
+            - speakeasy-sdk-regen-1741467157
             - 0.0.0
 targets:
     flux0:
         source: FastAPI
         sourceNamespace: fast-api
-        sourceRevisionDigest: sha256:f3b9b4715a3357678c18eff1d7444cff2349f5b48b7575e3c5a706cfa5a4694c
-        sourceBlobDigest: sha256:21d415d43a679b9cd15e82a8559838ff764fb3a1fd0cf5d539c7f7f27e98f8c5
+        sourceRevisionDigest: sha256:904f29ab3a64e4abba59fadc9960e37ca4057adde49ea2d50402f186c3ac132b
+        sourceBlobDigest: sha256:412702981ef9c0356c91f207bce2f2fc5563be1d25d50c2430c6946b2544272d
         codeSamplesNamespace: fast-api-code-samples
-        codeSamplesRevisionDigest: sha256:2f341b33e7397b7d966ec158c79ed32b2a54db16a89aa10251acbf282da72d51
+        codeSamplesRevisionDigest: sha256:e9ec6d7e2ee5844bc7464e6365b9dbc74c18275f2da707b05ff0932bf4357ab5
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
         FastAPI:
             inputs:
-                - location: ../openapi.json
+                - location: https://7590-2a0d-6fc2-4990-1500-a98a-7884-b9ba-51f5.ngrok-free.app/openapi.json
             registry:
                 location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api
     targets:
         flux0:
             target: python
             source: FastAPI
+            publish:
+                pypi:
+                    token: $pypi_token
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api-code-samples

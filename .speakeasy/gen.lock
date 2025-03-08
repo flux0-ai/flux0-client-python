@@ -1,12 +1,15 @@
 lockVersion: 2.0.0
 id: c73366ce-0678-424d-a240-64558592fd65
 management:
-  docChecksum: 5e40078430a26c9daf6332b719c5cf21
+  docChecksum: 0ff4c08a8633fc658c9ba91ad04da407
   docVersion: 0.0.0
   speakeasyVersion: 1.513.4
   generationVersion: 2.545.4
-  releaseVersion: 0.0.1
-  configChecksum: d073d4fae4e91b36a6388b443f9f7401
+  releaseVersion: 0.0.0
+  configChecksum: 9a6a85908a38691d9368b9ff148ef40a
+  repoURL: https://github.com/flux0-ai/flux0-client-python.git
+  installationURL: https://github.com/flux0-ai/flux0-client-python.git
+  published: true
 features:
   python:
     additionalDependencies: 1.0.0
@@ -46,14 +49,18 @@ generatedFiles:
   - docs/models/controloptions.md
   - docs/models/createsessioneventrequest.md
   - docs/models/createsessionrequest.md
-  - docs/models/data.md
   - docs/models/emittedeventdto.md
+  - docs/models/emittedeventdtodata.md
   - docs/models/emittedeventstream.md
   - docs/models/eventcreationparamsdto.md
+  - docs/models/eventdto.md
+  - docs/models/eventdtodata.md
+  - docs/models/eventsdto.md
   - docs/models/eventsourcedto.md
   - docs/models/eventtypedto.md
   - docs/models/httpvalidationerror.md
   - docs/models/jsonpatchoperationdto.md
+  - docs/models/listsessioneventsrequest.md
   - docs/models/loc.md
   - docs/models/messageeventdatadto.md
   - docs/models/mode.md
@@ -105,10 +112,13 @@ generatedFiles:
   - src/flux0_client/models/emittedeventdto.py
   - src/flux0_client/models/emittedeventstream.py
   - src/flux0_client/models/eventcreationparamsdto.py
+  - src/flux0_client/models/eventdto.py
+  - src/flux0_client/models/eventsdto.py
   - src/flux0_client/models/eventsourcedto.py
   - src/flux0_client/models/eventtypedto.py
   - src/flux0_client/models/httpvalidationerror.py
   - src/flux0_client/models/jsonpatchoperationdto.py
+  - src/flux0_client/models/list_session_eventsop.py
   - src/flux0_client/models/messageeventdatadto.py
   - src/flux0_client/models/reasoningpartdto.py
   - src/flux0_client/models/retrieve_agentop.py
@@ -202,5 +212,17 @@ examples:
       responses:
         "200":
           text/event-stream: "event: chunk\ndata: {\"correlation_id\": \"RID(fxjwGfAIYV)::u9ysV1pbcd\", \"event_id\": \"e936e0ba-1bfe-4f59-a061-2853c5517ade\", \"seq\": 0, \"patches\": [{\"op\": \"add\", \"path\": \"/content/-\", \"value\": \"Hi\"}], \"metadata\": {}, \"timestamp\": 1739376296.060092}"
+  list_session_events:
+    "":
+      parameters:
+        path:
+          session_id: "zv3h4j5Fjv"
+        query:
+          min_offset: 0
+          correlation_id: "RID(lyH-sVmwJO)::Y8oBzYT4CQ"
+          types: ["message"]
+      responses:
+        "200":
+          application/json: {"data": [{"id": "o5kf8vKzI5", "correlation_id": "RID(lyH-sVmwJO)::Y8oBzYT4CQ", "type": "message", "source": "user", "offset": 0, "data": {"type": "message", "parts": [{"type": "content", "content": "The weather in San Francisco is currently 60 degrees and foggy."}], "participant": {"display_name": "John Doe", "id": "i5f9zYvtJ4"}}, "deleted": true, "metadata": {"agent_id": "vUfk4PgjTm", "agent_name": "Drizzle"}, "created_at": "2025-01-29T09:27:41Z"}]}
 examplesVersion: 1.0.0
 generatedTests: {}
