@@ -1,0 +1,205 @@
+lockVersion: 2.0.0
+id: dc53ac24-1e8c-4e73-abbd-0c89d05b3883
+management:
+  docChecksum: 5e40078430a26c9daf6332b719c5cf21
+  docVersion: 0.0.0
+  speakeasyVersion: 1.513.4
+  generationVersion: 2.545.4
+  releaseVersion: 0.0.1
+  configChecksum: 81073b7698b030b678b1230e83bd1f8b
+  repoURL: https://github.com/flux0-ai/flux0-client-python.git
+  installationURL: https://github.com/flux0-ai/flux0-client-python.git
+  published: true
+features:
+  python:
+    additionalDependencies: 1.0.0
+    constsAndDefaults: 1.0.5
+    core: 5.12.2
+    defaultEnabledRetries: 0.2.0
+    enumUnions: 0.1.0
+    envVarSecurityUsage: 0.3.2
+    flatRequests: 1.0.1
+    flattening: 3.1.1
+    globalSecurityCallbacks: 1.0.0
+    globalServerURLs: 3.1.0
+    methodArguments: 1.0.2
+    nameOverrides: 3.0.1
+    nullables: 1.0.1
+    responseFormat: 1.0.1
+    retries: 3.0.2
+    sdkHooks: 1.0.1
+    serverEvents: 1.0.7
+    unions: 3.0.4
+generatedFiles:
+  - .gitattributes
+  - .python-version
+  - .vscode/settings.json
+  - USAGE.md
+  - docs/models/agentcreationparamsdto.md
+  - docs/models/agentdto.md
+  - docs/models/agentsdto.md
+  - docs/models/chunkeventdto.md
+  - docs/models/chunkeventstream.md
+  - docs/models/consumptionoffsetsdto.md
+  - docs/models/contentpartdto.md
+  - docs/models/controloptions.md
+  - docs/models/createsessioneventrequest.md
+  - docs/models/createsessionrequest.md
+  - docs/models/data.md
+  - docs/models/emittedeventdto.md
+  - docs/models/emittedeventstream.md
+  - docs/models/eventcreationparamsdto.md
+  - docs/models/eventsourcedto.md
+  - docs/models/eventtypedto.md
+  - docs/models/httpvalidationerror.md
+  - docs/models/jsonpatchoperationdto.md
+  - docs/models/loc.md
+  - docs/models/messageeventdatadto.md
+  - docs/models/mode.md
+  - docs/models/op.md
+  - docs/models/parts.md
+  - docs/models/reasoningpartdto.md
+  - docs/models/retrieveagentrequest.md
+  - docs/models/retrievesessionrequest.md
+  - docs/models/sessioncreationparamsdto.md
+  - docs/models/sessiondto.md
+  - docs/models/sessionstream.md
+  - docs/models/statuseventdatadto.md
+  - docs/models/statuseventdatastatusfield.md
+  - docs/models/toolcalldto.md
+  - docs/models/tooleventdatadto.md
+  - docs/models/toolpartdto.md
+  - docs/models/toolresultdto.md
+  - docs/models/utils/retryconfig.md
+  - docs/models/validationerror.md
+  - docs/sdks/agents/README.md
+  - docs/sdks/sdk/README.md
+  - docs/sdks/sessions/README.md
+  - poetry.toml
+  - py.typed
+  - pylintrc
+  - pyproject.toml
+  - scripts/prepare_readme.py
+  - scripts/publish.sh
+  - src/openapi/__init__.py
+  - src/openapi/_hooks/__init__.py
+  - src/openapi/_hooks/sdkhooks.py
+  - src/openapi/_hooks/types.py
+  - src/openapi/_version.py
+  - src/openapi/agents.py
+  - src/openapi/basesdk.py
+  - src/openapi/httpclient.py
+  - src/openapi/models/__init__.py
+  - src/openapi/models/agentcreationparamsdto.py
+  - src/openapi/models/agentdto.py
+  - src/openapi/models/agentsdto.py
+  - src/openapi/models/apierror.py
+  - src/openapi/models/chunkeventdto.py
+  - src/openapi/models/chunkeventstream.py
+  - src/openapi/models/consumptionoffsetsdto.py
+  - src/openapi/models/contentpartdto.py
+  - src/openapi/models/controloptions.py
+  - src/openapi/models/create_session_eventop.py
+  - src/openapi/models/create_sessionop.py
+  - src/openapi/models/emittedeventdto.py
+  - src/openapi/models/emittedeventstream.py
+  - src/openapi/models/eventcreationparamsdto.py
+  - src/openapi/models/eventsourcedto.py
+  - src/openapi/models/eventtypedto.py
+  - src/openapi/models/httpvalidationerror.py
+  - src/openapi/models/jsonpatchoperationdto.py
+  - src/openapi/models/messageeventdatadto.py
+  - src/openapi/models/reasoningpartdto.py
+  - src/openapi/models/retrieve_agentop.py
+  - src/openapi/models/retrieve_sessionop.py
+  - src/openapi/models/sessioncreationparamsdto.py
+  - src/openapi/models/sessiondto.py
+  - src/openapi/models/sessionstream.py
+  - src/openapi/models/statuseventdatadto.py
+  - src/openapi/models/statuseventdatastatusfield.py
+  - src/openapi/models/toolcalldto.py
+  - src/openapi/models/tooleventdatadto.py
+  - src/openapi/models/toolpartdto.py
+  - src/openapi/models/toolresultdto.py
+  - src/openapi/models/validationerror.py
+  - src/openapi/py.typed
+  - src/openapi/sdk.py
+  - src/openapi/sdkconfiguration.py
+  - src/openapi/sessions.py
+  - src/openapi/types/__init__.py
+  - src/openapi/types/basemodel.py
+  - src/openapi/utils/__init__.py
+  - src/openapi/utils/annotations.py
+  - src/openapi/utils/enums.py
+  - src/openapi/utils/eventstreaming.py
+  - src/openapi/utils/forms.py
+  - src/openapi/utils/headers.py
+  - src/openapi/utils/logger.py
+  - src/openapi/utils/metadata.py
+  - src/openapi/utils/queryparams.py
+  - src/openapi/utils/requestbodies.py
+  - src/openapi/utils/retries.py
+  - src/openapi/utils/security.py
+  - src/openapi/utils/serializers.py
+  - src/openapi/utils/url.py
+  - src/openapi/utils/values.py
+examples:
+  list_agents:
+    "":
+      responses:
+        "200":
+          application/json: {"data": [{"id": "vUfk4PgjTm", "name": "Drizzle", "type": "weather", "description": "An agent that checks the weather", "created_at": "2025-01-21T23:44:48"}]}
+  create_agent:
+    "":
+      requestBody:
+        application/json: {"name": "Drizzle", "type": "weather", "description": "An agent that checks the weather"}
+      responses:
+        "201":
+          application/json: {"id": "vUfk4PgjTm", "name": "Drizzle", "type": "weather", "description": "An agent that checks the weather", "created_at": "2025-01-21T23:44:48"}
+  retrieve_agent:
+    "":
+      parameters:
+        path:
+          agent_id: "vUfk4PgjTm"
+      responses:
+        "200":
+          application/json: {"id": "vUfk4PgjTm", "name": "Drizzle", "type": "weather", "description": "An agent that checks the weather", "created_at": "2025-01-21T23:44:48"}
+  create_session:
+    "":
+      parameters:
+        query:
+          allow_greeting: false
+      requestBody:
+        application/json: {"agent_id": "vUfk4PgjTm", "title": "What's the weather in SF?"}
+      responses:
+        "201":
+          application/json: {"id": "zv3h4j5Fjv", "agent_id": "vUfk4PgjTm", "user_id": "v9pg5Zv3h4", "title": "The weather in SF", "consumption_offsets": {"client": 37}, "created_at": "2025-01-29T09:27:41Z"}
+  retrieve_session:
+    "":
+      parameters:
+        path:
+          session_id: "zv3h4j5Fjv"
+      responses:
+        "200":
+          application/json: {"id": "zv3h4j5Fjv", "agent_id": "vUfk4PgjTm", "user_id": "v9pg5Zv3h4", "title": "The weather in SF", "consumption_offsets": {"client": 37}, "created_at": "2025-01-29T09:27:41Z"}
+  create_session_event:
+    status:
+      parameters:
+        path:
+          session_id: "zv3h4j5Fjv"
+      requestBody:
+        application/json: {"type": "message", "source": "user", "content": "What's the weather in SF?"}
+      responses:
+        "200":
+          text/event-stream: "event: status\ndata: {\"id\": \"F2srsmTGrN\", \"source\": \"ai_agent\", \"kind\": \"status\", \"correlation_id\": \"RID(fxjwGfAIYV)::u9ysV1pbcd\", \"data\": {\"type\": \"status\", \"acknowledged_offset\": 0, \"status\": \"processing\", \"data\": {}}}"
+    chunk:
+      parameters:
+        path:
+          session_id: "zv3h4j5Fjv"
+      requestBody:
+        application/json: {"type": "custom", "source": "user", "content": "What's the weather in SF?"}
+      responses:
+        "200":
+          text/event-stream: "event: chunk\ndata: {\"correlation_id\": \"RID(fxjwGfAIYV)::u9ysV1pbcd\", \"event_id\": \"e936e0ba-1bfe-4f59-a061-2853c5517ade\", \"seq\": 0, \"patches\": [{\"op\": \"add\", \"path\": \"/content/-\", \"value\": \"Hi\"}], \"metadata\": {}, \"timestamp\": 1739376296.060092}"
+examplesVersion: 1.0.0
+generatedTests: {}

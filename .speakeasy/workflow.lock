@@ -1,0 +1,40 @@
+speakeasyVersion: 1.513.4
+sources:
+    FastAPI:
+        sourceNamespace: fast-api
+        sourceRevisionDigest: sha256:9a7afc0c2fe2ca29d07c156ce38f58c0f7e0dfabfe1c927994806917e296366f
+        sourceBlobDigest: sha256:21d415d43a679b9cd15e82a8559838ff764fb3a1fd0cf5d539c7f7f27e98f8c5
+        tags:
+            - latest
+            - speakeasy-sdk-regen-1741465892
+            - 0.0.0
+targets:
+    flux-0:
+        source: FastAPI
+        sourceNamespace: fast-api
+        sourceRevisionDigest: sha256:9a7afc0c2fe2ca29d07c156ce38f58c0f7e0dfabfe1c927994806917e296366f
+        sourceBlobDigest: sha256:21d415d43a679b9cd15e82a8559838ff764fb3a1fd0cf5d539c7f7f27e98f8c5
+        codeSamplesNamespace: fast-api-code-samples
+        codeSamplesRevisionDigest: sha256:5484b255c7f3cb04924d344302715b712475e3342db0bd328845ab28546e953d
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        FastAPI:
+            inputs:
+                - location: https://7590-2a0d-6fc2-4990-1500-a98a-7884-b9ba-51f5.ngrok-free.app/openapi.json
+            registry:
+                location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api
+    targets:
+        flux-0:
+            target: python
+            source: FastAPI
+            publish:
+                pypi:
+                    token: $pypi_token
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api-code-samples
+                labelOverride:
+                    fixedValue: Python (SDK)
+                blocking: false
