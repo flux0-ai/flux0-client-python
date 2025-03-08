@@ -7,7 +7,7 @@ sources:
     registry:
       location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api
 targets:
-  flux-0:
+  flux0:
     target: python
     source: FastAPI
     publish:

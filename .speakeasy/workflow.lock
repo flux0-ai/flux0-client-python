@@ -1,0 +1,36 @@
+speakeasyVersion: 1.513.4
+sources:
+    FastAPI:
+        sourceNamespace: fast-api
+        sourceRevisionDigest: sha256:f3b9b4715a3357678c18eff1d7444cff2349f5b48b7575e3c5a706cfa5a4694c
+        sourceBlobDigest: sha256:21d415d43a679b9cd15e82a8559838ff764fb3a1fd0cf5d539c7f7f27e98f8c5
+        tags:
+            - latest
+            - 0.0.0
+targets:
+    flux0:
+        source: FastAPI
+        sourceNamespace: fast-api
+        sourceRevisionDigest: sha256:f3b9b4715a3357678c18eff1d7444cff2349f5b48b7575e3c5a706cfa5a4694c
+        sourceBlobDigest: sha256:21d415d43a679b9cd15e82a8559838ff764fb3a1fd0cf5d539c7f7f27e98f8c5
+        codeSamplesNamespace: fast-api-code-samples
+        codeSamplesRevisionDigest: sha256:2f341b33e7397b7d966ec158c79ed32b2a54db16a89aa10251acbf282da72d51
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        FastAPI:
+            inputs:
+                - location: ../openapi.json
+            registry:
+                location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api
+    targets:
+        flux0:
+            target: python
+            source: FastAPI
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api-code-samples
+                labelOverride:
+                    fixedValue: Python (SDK)
+                blocking: false

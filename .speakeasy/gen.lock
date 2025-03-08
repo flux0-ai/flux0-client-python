@@ -1,0 +1,206 @@
+lockVersion: 2.0.0
+id: c73366ce-0678-424d-a240-64558592fd65
+management:
+  docChecksum: 5e40078430a26c9daf6332b719c5cf21
+  docVersion: 0.0.0
+  speakeasyVersion: 1.513.4
+  generationVersion: 2.545.4
+  releaseVersion: 0.0.1
+  configChecksum: d073d4fae4e91b36a6388b443f9f7401
+features:
+  python:
+    additionalDependencies: 1.0.0
+    constsAndDefaults: 1.0.5
+    core: 5.12.2
+    defaultEnabledRetries: 0.2.0
+    devContainers: 3.0.0
+    enumUnions: 0.1.0
+    envVarSecurityUsage: 0.3.2
+    flatRequests: 1.0.1
+    flattening: 3.1.1
+    globalSecurityCallbacks: 1.0.0
+    globalServerURLs: 3.1.0
+    methodArguments: 1.0.2
+    nameOverrides: 3.0.1
+    nullables: 1.0.1
+    responseFormat: 1.0.1
+    retries: 3.0.2
+    sdkHooks: 1.0.1
+    serverEvents: 1.0.7
+    unions: 3.0.4
+generatedFiles:
+  - .devcontainer/README.md
+  - .devcontainer/devcontainer.json
+  - .devcontainer/setup.sh
+  - .gitattributes
+  - .python-version
+  - .vscode/settings.json
+  - USAGE.md
+  - docs/models/agentcreationparamsdto.md
+  - docs/models/agentdto.md
+  - docs/models/agentsdto.md
+  - docs/models/chunkeventdto.md
+  - docs/models/chunkeventstream.md
+  - docs/models/consumptionoffsetsdto.md
+  - docs/models/contentpartdto.md
+  - docs/models/controloptions.md
+  - docs/models/createsessioneventrequest.md
+  - docs/models/createsessionrequest.md
+  - docs/models/data.md
+  - docs/models/emittedeventdto.md
+  - docs/models/emittedeventstream.md
+  - docs/models/eventcreationparamsdto.md
+  - docs/models/eventsourcedto.md
+  - docs/models/eventtypedto.md
+  - docs/models/httpvalidationerror.md
+  - docs/models/jsonpatchoperationdto.md
+  - docs/models/loc.md
+  - docs/models/messageeventdatadto.md
+  - docs/models/mode.md
+  - docs/models/op.md
+  - docs/models/parts.md
+  - docs/models/reasoningpartdto.md
+  - docs/models/retrieveagentrequest.md
+  - docs/models/retrievesessionrequest.md
+  - docs/models/sessioncreationparamsdto.md
+  - docs/models/sessiondto.md
+  - docs/models/sessionstream.md
+  - docs/models/statuseventdatadto.md
+  - docs/models/statuseventdatastatusfield.md
+  - docs/models/toolcalldto.md
+  - docs/models/tooleventdatadto.md
+  - docs/models/toolpartdto.md
+  - docs/models/toolresultdto.md
+  - docs/models/utils/retryconfig.md
+  - docs/models/validationerror.md
+  - docs/sdks/agents/README.md
+  - docs/sdks/flux0/README.md
+  - docs/sdks/sessions/README.md
+  - poetry.toml
+  - py.typed
+  - pylintrc
+  - pyproject.toml
+  - scripts/prepare_readme.py
+  - scripts/publish.sh
+  - src/flux0_client/__init__.py
+  - src/flux0_client/_hooks/__init__.py
+  - src/flux0_client/_hooks/sdkhooks.py
+  - src/flux0_client/_hooks/types.py
+  - src/flux0_client/_version.py
+  - src/flux0_client/agents.py
+  - src/flux0_client/basesdk.py
+  - src/flux0_client/httpclient.py
+  - src/flux0_client/models/__init__.py
+  - src/flux0_client/models/agentcreationparamsdto.py
+  - src/flux0_client/models/agentdto.py
+  - src/flux0_client/models/agentsdto.py
+  - src/flux0_client/models/apierror.py
+  - src/flux0_client/models/chunkeventdto.py
+  - src/flux0_client/models/chunkeventstream.py
+  - src/flux0_client/models/consumptionoffsetsdto.py
+  - src/flux0_client/models/contentpartdto.py
+  - src/flux0_client/models/controloptions.py
+  - src/flux0_client/models/create_session_eventop.py
+  - src/flux0_client/models/create_sessionop.py
+  - src/flux0_client/models/emittedeventdto.py
+  - src/flux0_client/models/emittedeventstream.py
+  - src/flux0_client/models/eventcreationparamsdto.py
+  - src/flux0_client/models/eventsourcedto.py
+  - src/flux0_client/models/eventtypedto.py
+  - src/flux0_client/models/httpvalidationerror.py
+  - src/flux0_client/models/jsonpatchoperationdto.py
+  - src/flux0_client/models/messageeventdatadto.py
+  - src/flux0_client/models/reasoningpartdto.py
+  - src/flux0_client/models/retrieve_agentop.py
+  - src/flux0_client/models/retrieve_sessionop.py
+  - src/flux0_client/models/sessioncreationparamsdto.py
+  - src/flux0_client/models/sessiondto.py
+  - src/flux0_client/models/sessionstream.py
+  - src/flux0_client/models/statuseventdatadto.py
+  - src/flux0_client/models/statuseventdatastatusfield.py
+  - src/flux0_client/models/toolcalldto.py
+  - src/flux0_client/models/tooleventdatadto.py
+  - src/flux0_client/models/toolpartdto.py
+  - src/flux0_client/models/toolresultdto.py
+  - src/flux0_client/models/validationerror.py
+  - src/flux0_client/py.typed
+  - src/flux0_client/sdk.py
+  - src/flux0_client/sdkconfiguration.py
+  - src/flux0_client/sessions.py
+  - src/flux0_client/types/__init__.py
+  - src/flux0_client/types/basemodel.py
+  - src/flux0_client/utils/__init__.py
+  - src/flux0_client/utils/annotations.py
+  - src/flux0_client/utils/enums.py
+  - src/flux0_client/utils/eventstreaming.py
+  - src/flux0_client/utils/forms.py
+  - src/flux0_client/utils/headers.py
+  - src/flux0_client/utils/logger.py
+  - src/flux0_client/utils/metadata.py
+  - src/flux0_client/utils/queryparams.py
+  - src/flux0_client/utils/requestbodies.py
+  - src/flux0_client/utils/retries.py
+  - src/flux0_client/utils/security.py
+  - src/flux0_client/utils/serializers.py
+  - src/flux0_client/utils/url.py
+  - src/flux0_client/utils/values.py
+examples:
+  list_agents:
+    "":
+      responses:
+        "200":
+          application/json: {"data": [{"id": "vUfk4PgjTm", "name": "Drizzle", "type": "weather", "description": "An agent that checks the weather", "created_at": "2025-01-21T23:44:48"}]}
+  create_agent:
+    "":
+      requestBody:
+        application/json: {"name": "Drizzle", "type": "weather", "description": "An agent that checks the weather"}
+      responses:
+        "201":
+          application/json: {"id": "vUfk4PgjTm", "name": "Drizzle", "type": "weather", "description": "An agent that checks the weather", "created_at": "2025-01-21T23:44:48"}
+  retrieve_agent:
+    "":
+      parameters:
+        path:
+          agent_id: "vUfk4PgjTm"
+      responses:
+        "200":
+          application/json: {"id": "vUfk4PgjTm", "name": "Drizzle", "type": "weather", "description": "An agent that checks the weather", "created_at": "2025-01-21T23:44:48"}
+  create_session:
+    "":
+      parameters:
+        query:
+          allow_greeting: false
+      requestBody:
+        application/json: {"agent_id": "vUfk4PgjTm", "title": "What's the weather in SF?"}
+      responses:
+        "201":
+          application/json: {"id": "zv3h4j5Fjv", "agent_id": "vUfk4PgjTm", "user_id": "v9pg5Zv3h4", "title": "The weather in SF", "consumption_offsets": {"client": 37}, "created_at": "2025-01-29T09:27:41Z"}
+  retrieve_session:
+    "":
+      parameters:
+        path:
+          session_id: "zv3h4j5Fjv"
+      responses:
+        "200":
+          application/json: {"id": "zv3h4j5Fjv", "agent_id": "vUfk4PgjTm", "user_id": "v9pg5Zv3h4", "title": "The weather in SF", "consumption_offsets": {"client": 37}, "created_at": "2025-01-29T09:27:41Z"}
+  create_session_event:
+    status:
+      parameters:
+        path:
+          session_id: "zv3h4j5Fjv"
+      requestBody:
+        application/json: {"type": "message", "source": "user", "content": "What's the weather in SF?"}
+      responses:
+        "200":
+          text/event-stream: "event: status\ndata: {\"id\": \"F2srsmTGrN\", \"source\": \"ai_agent\", \"kind\": \"status\", \"correlation_id\": \"RID(fxjwGfAIYV)::u9ysV1pbcd\", \"data\": {\"type\": \"status\", \"acknowledged_offset\": 0, \"status\": \"processing\", \"data\": {}}}"
+    chunk:
+      parameters:
+        path:
+          session_id: "zv3h4j5Fjv"
+      requestBody:
+        application/json: {"type": "custom", "source": "user", "content": "What's the weather in SF?"}
+      responses:
+        "200":
+          text/event-stream: "event: chunk\ndata: {\"correlation_id\": \"RID(fxjwGfAIYV)::u9ysV1pbcd\", \"event_id\": \"e936e0ba-1bfe-4f59-a061-2853c5517ade\", \"seq\": 0, \"patches\": [{\"op\": \"add\", \"path\": \"/content/-\", \"value\": \"Hi\"}], \"metadata\": {}, \"timestamp\": 1739376296.060092}"
+examplesVersion: 1.0.0
+generatedTests: {}
