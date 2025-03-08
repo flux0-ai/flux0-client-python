@@ -1,0 +1,12 @@
+# AgentDTO
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          | Example                                                              |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `id`                                                                 | *str*                                                                | :heavy_check_mark:                                                   | Unique identifier for the agent                                      | vUfk4PgjTm                                                           |
+| `name`                                                               | *str*                                                                | :heavy_check_mark:                                                   | The display name of the agent, mainly for representation purposes    | Drizzle                                                              |
+| `type`                                                               | *str*                                                                | :heavy_check_mark:                                                   | The type of the agent                                                | weather                                                              |
+| `created_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | When the agent was created                                           | 2025-01-21T23:44:48                                                  |
+| `description`                                                        | *OptionalNullable[str]*                                              | :heavy_minus_sign:                                                   | N/A                                                                  | An agent that checks the weather                                     |

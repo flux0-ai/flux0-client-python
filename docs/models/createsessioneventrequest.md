@@ -1,0 +1,9 @@
+# CreateSessionEventRequest
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     | Example                                                                         |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `session_id`                                                                    | *str*                                                                           | :heavy_check_mark:                                                              | Unique identifier of the session                                                | zv3h4j5Fjv                                                                      |
+| `event_creation_params_dto`                                                     | [models.EventCreationParamsDTO](../models/eventcreationparamsdto.md)            | :heavy_check_mark:                                                              | N/A                                                                             | {<br/>"content": "What's the weather in SF?",<br/>"kind": "message",<br/>"source": "user"<br/>} |

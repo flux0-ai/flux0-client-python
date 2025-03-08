@@ -1,21 +1,21 @@
 workflowVersion: 1.0.0
 speakeasyVersion: latest
 sources:
-  FastAPI:
-    inputs:
-      - location: https://7590-2a0d-6fc2-4990-1500-a98a-7884-b9ba-51f5.ngrok-free.app/openapi.json
-    registry:
-      location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api
+    FastAPI:
+        inputs:
+            - location: https://7590-2a0d-6fc2-4990-1500-a98a-7884-b9ba-51f5.ngrok-free.app/openapi.json
+        registry:
+            location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api
 targets:
-  flux0:
-    target: python
-    source: FastAPI
-    publish:
-      pypi:
-        token: $pypi_token
-    codeSamples:
-      registry:
-        location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api-code-samples
-      labelOverride:
-        fixedValue: Python (SDK)
-      blocking: false
+    flux0:
+        target: python
+        source: FastAPI
+        publish:
+            pypi:
+                token: $pypi_token
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api-code-samples
+            labelOverride:
+                fixedValue: Python (SDK)
+            blocking: false
