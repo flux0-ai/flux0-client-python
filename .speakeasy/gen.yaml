@@ -3,7 +3,7 @@ generation:
   devContainers:
     enabled: true
     schemaPath: openapi.json
-  sdkClassName: Flux0
+  sdkClassName: Flux0Client
   maintainOpenAPIOrder: true
   usageSnippets:
     optionalPropertyRendering: withExample
