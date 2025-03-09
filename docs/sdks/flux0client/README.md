@@ -1,4 +1,4 @@
-# Flux0 SDK
+# Flux0Client SDK
 
 ## Overview
 
