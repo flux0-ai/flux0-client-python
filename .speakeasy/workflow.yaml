@@ -3,7 +3,7 @@ speakeasyVersion: latest
 sources:
     FastAPI:
         inputs:
-            - location: https://7590-2a0d-6fc2-4990-1500-a98a-7884-b9ba-51f5.ngrok-free.app/openapi.json
+            - location: https://raw.githubusercontent.com/flux0-ai/flux0-api-spec/refs/heads/main/openapi.json
         registry:
             location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api
 targets:
