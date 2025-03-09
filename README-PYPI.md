@@ -86,9 +86,9 @@ It's also possible to write a standalone Python script without needing to set up
 # ]
 # ///
 
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
-sdk = Flux0(
+sdk = Flux0Client(
   # SDK arguments
 )
 
@@ -116,12 +116,12 @@ Generally, the SDK will work well with most IDEs out of the box. However, when u
 
 ```python
 # Synchronous Example
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 
-with Flux0() as flux0:
+with Flux0Client() as fc_client:
 
-    res = flux0.agents.list()
+    res = fc_client.agents.list()
 
     # Handle response
     print(res)
@@ -133,13 +133,13 @@ The same SDK client can also be used to make asychronous requests by importing a
 ```python
 # Asynchronous Example
 import asyncio
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 async def main():
 
-    async with Flux0() as flux0:
+    async with Flux0Client() as fc_client:
 
-        res = await flux0.agents.list_async()
+        res = await fc_client.agents.list_async()
 
         # Handle response
         print(res)
@@ -185,12 +185,12 @@ underlying connection when the context is exited.
 
 ```python
 import flux0_client
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 
-with Flux0() as flux0:
+with Flux0Client() as fc_client:
 
-    res = flux0.sessions.create_event(session_id="zv3h4j5Fjv", type_=flux0_client.EventTypeDTO.MESSAGE, source=flux0_client.EventSourceDTO.USER, content="What's the weather in SF?")
+    res = fc_client.sessions.create_event(session_id="zv3h4j5Fjv", type_=flux0_client.EventTypeDTO.MESSAGE, source=flux0_client.EventSourceDTO.USER, content="What's the weather in SF?")
 
     with res as event_stream:
         for event in event_stream:
@@ -211,13 +211,13 @@ Some of the endpoints in this SDK support retries. If you use the SDK without an
 
 To change the default retry strategy for a single API call, simply provide a `RetryConfig` object to the call:
 ```python
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 from flux0_client.utils import BackoffStrategy, RetryConfig
 
 
-with Flux0() as flux0:
+with Flux0Client() as fc_client:
 
-    res = flux0.agents.list(,
+    res = fc_client.agents.list(,
         RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
 
     # Handle response
@@ -227,15 +227,15 @@ with Flux0() as flux0:
 
 If you'd like to override the default retry strategy for all operations that support retries, you can use the `retry_config` optional parameter when initializing the SDK:
 ```python
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 from flux0_client.utils import BackoffStrategy, RetryConfig
 
 
-with Flux0(
+with Flux0Client(
     retry_config=RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False),
-) as flux0:
+) as fc_client:
 
-    res = flux0.agents.list()
+    res = fc_client.agents.list()
 
     # Handle response
     print(res)
@@ -267,14 +267,14 @@ When custom error responses are specified for an operation, the SDK may also rai
 ### Example
 
 ```python
-from flux0_client import Flux0, models
+from flux0_client import Flux0Client, models
 
 
-with Flux0() as flux0:
+with Flux0Client() as fc_client:
     res = None
     try:
 
-        res = flux0.agents.retrieve(agent_id="vUfk4PgjTm")
+        res = fc_client.agents.retrieve(agent_id="vUfk4PgjTm")
 
         # Handle response
         print(res)
@@ -295,14 +295,14 @@ with Flux0() as flux0:
 
 The default server can be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 ```python
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 
-with Flux0(
+with Flux0Client(
     server_url="http://127.0.0.1:8080",
-) as flux0:
+) as fc_client:
 
-    res = flux0.agents.list()
+    res = fc_client.agents.list()
 
     # Handle response
     print(res)
@@ -319,16 +319,16 @@ This allows you to wrap the client with your own custom logic, such as adding cu
 
 For example, you could specify a header for every request that this sdk makes as follows:
 ```python
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 import httpx
 
 http_client = httpx.Client(headers={"x-custom-header": "someValue"})
-s = Flux0(client=http_client)
+s = Flux0Client(client=http_client)
 ```
 
 or you could wrap the client with your own custom logic:
 ```python
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 from flux0_client.httpclient import AsyncHttpClient
 import httpx
 
@@ -387,29 +387,29 @@ class CustomClient(AsyncHttpClient):
             extensions=extensions,
         )
 
-s = Flux0(async_client=CustomClient(httpx.AsyncClient()))
+s = Flux0Client(async_client=CustomClient(httpx.AsyncClient()))
 ```
 <!-- End Custom HTTP Client [http-client] -->
 
 <!-- Start Resource Management [resource-management] -->
 ## Resource Management
 
-The `Flux0` class implements the context manager protocol and registers a finalizer function to close the underlying sync and async HTTPX clients it uses under the hood. This will close HTTP connections, release memory and free up other resources held by the SDK. In short-lived Python programs and notebooks that make a few SDK method calls, resource management may not be a concern. However, in longer-lived programs, it is beneficial to create a single SDK instance via a [context manager][context-manager] and reuse it across the application.
+The `Flux0Client` class implements the context manager protocol and registers a finalizer function to close the underlying sync and async HTTPX clients it uses under the hood. This will close HTTP connections, release memory and free up other resources held by the SDK. In short-lived Python programs and notebooks that make a few SDK method calls, resource management may not be a concern. However, in longer-lived programs, it is beneficial to create a single SDK instance via a [context manager][context-manager] and reuse it across the application.
 
 [context-manager]: https://docs.python.org/3/reference/datamodel.html#context-managers
 
 ```python
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 def main():
 
-    with Flux0() as flux0:
+    with Flux0Client() as fc_client:
         # Rest of application here...
 
 
 # Or when using async:
 async def amain():
 
-    async with Flux0() as flux0:
+    async with Flux0Client() as fc_client:
         # Rest of application here...
 ```
 <!-- End Resource Management [resource-management] -->
@@ -421,11 +421,11 @@ You can setup your SDK to emit debug logs for SDK requests and responses.
 
 You can pass your own logger class directly into your SDK.
 ```python
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 import logging
 
 logging.basicConfig(level=logging.DEBUG)
-s = Flux0(debug_logger=logging.getLogger("flux0_client"))
+s = Flux0Client(debug_logger=logging.getLogger("flux0_client"))
 ```
 
 You can also enable a default debug logger by setting an environment variable `FLUX0_DEBUG` to true.

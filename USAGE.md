@@ -1,12 +1,12 @@
 <!-- Start SDK Example Usage [usage] -->
 ```python
 # Synchronous Example
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 
-with Flux0() as flux0:
+with Flux0Client() as fc_client:
 
-    res = flux0.agents.list()
+    res = fc_client.agents.list()
 
     # Handle response
     print(res)
@@ -18,13 +18,13 @@ The same SDK client can also be used to make asychronous requests by importing a
 ```python
 # Asynchronous Example
 import asyncio
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 async def main():
 
-    async with Flux0() as flux0:
+    async with Flux0Client() as fc_client:
 
-        res = await flux0.agents.list_async()
+        res = await fc_client.agents.list_async()
 
         # Handle response
         print(res)

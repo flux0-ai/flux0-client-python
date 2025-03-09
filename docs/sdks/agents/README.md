@@ -19,12 +19,12 @@ Agents are returned in no guaranteed order.
 ### Example Usage
 
 ```python
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 
-with Flux0() as flux0:
+with Flux0Client() as fc_client:
 
-    res = flux0.agents.list()
+    res = fc_client.agents.list()
 
     # Handle response
     print(res)
@@ -54,12 +54,12 @@ Creates a new agent with the specified parameters.
 ### Example Usage
 
 ```python
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 
-with Flux0() as flux0:
+with Flux0Client() as fc_client:
 
-    res = flux0.agents.create(name="Drizzle", type_="weather", description="An agent that checks the weather")
+    res = fc_client.agents.create(name="Drizzle", type_="weather", description="An agent that checks the weather")
 
     # Handle response
     print(res)
@@ -92,12 +92,12 @@ Retrieves details of a specific agent by ID.
 ### Example Usage
 
 ```python
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 
-with Flux0() as flux0:
+with Flux0Client() as fc_client:
 
-    res = flux0.agents.retrieve(agent_id="vUfk4PgjTm")
+    res = fc_client.agents.retrieve(agent_id="vUfk4PgjTm")
 
     # Handle response
     print(res)

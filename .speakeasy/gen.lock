@@ -5,8 +5,8 @@ management:
   docVersion: 0.0.0
   speakeasyVersion: 1.513.4
   generationVersion: 2.545.4
-  releaseVersion: 0.0.0
-  configChecksum: 9a6a85908a38691d9368b9ff148ef40a
+  releaseVersion: 0.0.1
+  configChecksum: 1122ae83662ee1bcb0168585098a7edd
   repoURL: https://github.com/flux0-ai/flux0-client-python.git
   installationURL: https://github.com/flux0-ai/flux0-client-python.git
   published: true
@@ -81,7 +81,7 @@ generatedFiles:
   - docs/models/utils/retryconfig.md
   - docs/models/validationerror.md
   - docs/sdks/agents/README.md
-  - docs/sdks/flux0/README.md
+  - docs/sdks/flux0client/README.md
   - docs/sdks/sessions/README.md
   - poetry.toml
   - py.typed

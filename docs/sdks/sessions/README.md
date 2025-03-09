@@ -20,12 +20,12 @@ If no user is provided, a guest user will be created.
 ### Example Usage
 
 ```python
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 
-with Flux0() as flux0:
+with Flux0Client() as fc_client:
 
-    res = flux0.sessions.create(agent_id="vUfk4PgjTm", id="zv3h4j5Fjv", title="What's the weather in SF?")
+    res = fc_client.sessions.create(agent_id="vUfk4PgjTm", id="zv3h4j5Fjv", title="What's the weather in SF?")
 
     # Handle response
     print(res)
@@ -59,12 +59,12 @@ Retrieve details of a session by its unique identifier
 ### Example Usage
 
 ```python
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 
-with Flux0() as flux0:
+with Flux0Client() as fc_client:
 
-    res = flux0.sessions.retrieve(session_id="zv3h4j5Fjv")
+    res = fc_client.sessions.retrieve(session_id="zv3h4j5Fjv")
 
     # Handle response
     print(res)
@@ -97,12 +97,12 @@ Creates a new event in the specified session and streams upcoming events.
 
 ```python
 import flux0_client
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 
-with Flux0() as flux0:
+with Flux0Client() as fc_client:
 
-    res = flux0.sessions.create_event(session_id="zv3h4j5Fjv", type_=flux0_client.EventTypeDTO.MESSAGE, source=flux0_client.EventSourceDTO.USER, content="What's the weather in SF?")
+    res = fc_client.sessions.create_event(session_id="zv3h4j5Fjv", type_=flux0_client.EventTypeDTO.MESSAGE, source=flux0_client.EventSourceDTO.USER, content="What's the weather in SF?")
 
     with res as event_stream:
         for event in event_stream:
@@ -141,12 +141,12 @@ Retrieves events that occurred within a session, optionally filtering by source,
 
 ```python
 import flux0_client
-from flux0_client import Flux0
+from flux0_client import Flux0Client
 
 
-with Flux0() as flux0:
+with Flux0Client() as fc_client:
 
-    res = flux0.sessions.list_events(session_id="zv3h4j5Fjv", min_offset=0, correlation_id="RID(lyH-sVmwJO)::Y8oBzYT4CQ", types=[
+    res = fc_client.sessions.list_events(session_id="zv3h4j5Fjv", min_offset=0, correlation_id="RID(lyH-sVmwJO)::Y8oBzYT4CQ", types=[
         flux0_client.EventTypeDTO.MESSAGE,
     ])
 

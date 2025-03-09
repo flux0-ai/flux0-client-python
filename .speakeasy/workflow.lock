@@ -2,27 +2,27 @@ speakeasyVersion: 1.513.4
 sources:
     FastAPI:
         sourceNamespace: fast-api
-        sourceRevisionDigest: sha256:904f29ab3a64e4abba59fadc9960e37ca4057adde49ea2d50402f186c3ac132b
+        sourceRevisionDigest: sha256:e524b31e910abc5ab460454e685aa2eaa80e8e141c140c2f563152020cf9bee0
         sourceBlobDigest: sha256:412702981ef9c0356c91f207bce2f2fc5563be1d25d50c2430c6946b2544272d
         tags:
             - latest
-            - speakeasy-sdk-regen-1741467157
+            - speakeasy-sdk-regen-1741517898
             - 0.0.0
 targets:
     flux0:
         source: FastAPI
         sourceNamespace: fast-api
-        sourceRevisionDigest: sha256:904f29ab3a64e4abba59fadc9960e37ca4057adde49ea2d50402f186c3ac132b
+        sourceRevisionDigest: sha256:e524b31e910abc5ab460454e685aa2eaa80e8e141c140c2f563152020cf9bee0
         sourceBlobDigest: sha256:412702981ef9c0356c91f207bce2f2fc5563be1d25d50c2430c6946b2544272d
         codeSamplesNamespace: fast-api-code-samples
-        codeSamplesRevisionDigest: sha256:e9ec6d7e2ee5844bc7464e6365b9dbc74c18275f2da707b05ff0932bf4357ab5
+        codeSamplesRevisionDigest: sha256:7cdb9dd44097b5cb8da45298df3ca7fcfd905bc5ef7adb9cf5a9f742003932c6
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
         FastAPI:
             inputs:
-                - location: https://7590-2a0d-6fc2-4990-1500-a98a-7884-b9ba-51f5.ngrok-free.app/openapi.json
+                - location: https://raw.githubusercontent.com/flux0-ai/flux0-api-spec/refs/heads/main/openapi.json
             registry:
                 location: registry.speakeasyapi.dev/flux0/flux0-python/fast-api
     targets:

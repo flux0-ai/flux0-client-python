@@ -15,7 +15,7 @@ from typing import Dict, Optional, cast
 import weakref
 
 
-class Flux0(BaseSDK):
+class Flux0Client(BaseSDK):
     agents: Agents
     sessions: Sessions
 
