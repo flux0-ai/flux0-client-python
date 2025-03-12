@@ -164,6 +164,7 @@ asyncio.run(main())
 ### [sessions](https://github.com/flux0-ai/flux0-client-python/blob/master/docs/sdks/sessions/README.md)
 
 * [create](https://github.com/flux0-ai/flux0-client-python/blob/master/docs/sdks/sessions/README.md#create) - Create a new session
+* [list](https://github.com/flux0-ai/flux0-client-python/blob/master/docs/sdks/sessions/README.md#list) - List Sessions
 * [retrieve](https://github.com/flux0-ai/flux0-client-python/blob/master/docs/sdks/sessions/README.md#retrieve) - Retrieve Session
 * [create_event](https://github.com/flux0-ai/flux0-client-python/blob/master/docs/sdks/sessions/README.md#create_event) - Create and stream session events
 * [list_events](https://github.com/flux0-ai/flux0-client-python/blob/master/docs/sdks/sessions/README.md#list_events) - List Events

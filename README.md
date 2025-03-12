@@ -164,6 +164,7 @@ asyncio.run(main())
 ### [sessions](docs/sdks/sessions/README.md)
 
 * [create](docs/sdks/sessions/README.md#create) - Create a new session
+* [list](docs/sdks/sessions/README.md#list) - List Sessions
 * [retrieve](docs/sdks/sessions/README.md#retrieve) - Retrieve Session
 * [create_event](docs/sdks/sessions/README.md#create_event) - Create and stream session events
 * [list_events](docs/sdks/sessions/README.md#list_events) - List Events

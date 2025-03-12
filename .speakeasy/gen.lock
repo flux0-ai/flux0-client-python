@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: c73366ce-0678-424d-a240-64558592fd65
 management:
-  docChecksum: 0ff4c08a8633fc658c9ba91ad04da407
-  docVersion: 0.0.0
-  speakeasyVersion: 1.513.4
-  generationVersion: 2.545.4
-  releaseVersion: 0.0.1
-  configChecksum: 1122ae83662ee1bcb0168585098a7edd
+  docChecksum: 436cace512ffbcfd83ce5b683470c4d6
+  docVersion: 0.1.0
+  speakeasyVersion: 1.517.0
+  generationVersion: 2.548.1
+  releaseVersion: 0.1.0
+  configChecksum: d5425869f7c06780b4e70f16d0f51f16
   repoURL: https://github.com/flux0-ai/flux0-client-python.git
   installationURL: https://github.com/flux0-ai/flux0-client-python.git
   published: true
@@ -14,7 +14,7 @@ features:
   python:
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.12.2
+    core: 5.12.3
     defaultEnabledRetries: 0.2.0
     devContainers: 3.0.0
     enumUnions: 0.1.0
@@ -61,16 +61,18 @@ generatedFiles:
   - docs/models/httpvalidationerror.md
   - docs/models/jsonpatchoperationdto.md
   - docs/models/listsessioneventsrequest.md
+  - docs/models/listsessionsrequest.md
   - docs/models/loc.md
   - docs/models/messageeventdatadto.md
   - docs/models/mode.md
   - docs/models/op.md
-  - docs/models/parts.md
+  - docs/models/part.md
   - docs/models/reasoningpartdto.md
   - docs/models/retrieveagentrequest.md
   - docs/models/retrievesessionrequest.md
   - docs/models/sessioncreationparamsdto.md
   - docs/models/sessiondto.md
+  - docs/models/sessionsdto.md
   - docs/models/sessionstream.md
   - docs/models/statuseventdatadto.md
   - docs/models/statuseventdatastatusfield.md
@@ -119,12 +121,14 @@ generatedFiles:
   - src/flux0_client/models/httpvalidationerror.py
   - src/flux0_client/models/jsonpatchoperationdto.py
   - src/flux0_client/models/list_session_eventsop.py
+  - src/flux0_client/models/list_sessionsop.py
   - src/flux0_client/models/messageeventdatadto.py
   - src/flux0_client/models/reasoningpartdto.py
   - src/flux0_client/models/retrieve_agentop.py
   - src/flux0_client/models/retrieve_sessionop.py
   - src/flux0_client/models/sessioncreationparamsdto.py
   - src/flux0_client/models/sessiondto.py
+  - src/flux0_client/models/sessionsdto.py
   - src/flux0_client/models/sessionstream.py
   - src/flux0_client/models/statuseventdatadto.py
   - src/flux0_client/models/statuseventdatastatusfield.py
@@ -224,5 +228,13 @@ examples:
       responses:
         "200":
           application/json: {"data": [{"id": "o5kf8vKzI5", "correlation_id": "RID(lyH-sVmwJO)::Y8oBzYT4CQ", "type": "message", "source": "user", "offset": 0, "data": {"type": "message", "parts": [{"type": "content", "content": "The weather in San Francisco is currently 60 degrees and foggy."}], "participant": {"display_name": "John Doe", "id": "i5f9zYvtJ4"}}, "deleted": true, "metadata": {"agent_id": "vUfk4PgjTm", "agent_name": "Drizzle"}, "created_at": "2025-01-29T09:27:41Z"}]}
+  list_sessions:
+    "":
+      parameters:
+        query:
+          agent_id: "t5ul4jGZjb"
+      responses:
+        "200":
+          application/json: {"data": [{"id": "zv3h4j5Fjv", "agent_id": "vUfk4PgjTm", "user_id": "v9pg5Zv3h4", "title": "The weather in SF", "consumption_offsets": {"client": 37}, "created_at": "2025-01-29T09:27:41Z"}]}
 examplesVersion: 1.0.0
 generatedTests: {}
