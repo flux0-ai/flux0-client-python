@@ -42,11 +42,12 @@ from .list_session_eventsop import (
     ListSessionEventsRequest,
     ListSessionEventsRequestTypedDict,
 )
+from .list_sessionsop import ListSessionsRequest, ListSessionsRequestTypedDict
 from .messageeventdatadto import (
     MessageEventDataDTO,
     MessageEventDataDTOTypedDict,
-    Parts,
-    PartsTypedDict,
+    Part,
+    PartTypedDict,
 )
 from .reasoningpartdto import ReasoningPartDTO, ReasoningPartDTOTypedDict
 from .retrieve_agentop import RetrieveAgentRequest, RetrieveAgentRequestTypedDict
@@ -56,6 +57,7 @@ from .sessioncreationparamsdto import (
     SessionCreationParamsDTOTypedDict,
 )
 from .sessiondto import SessionDTO, SessionDTOTypedDict
+from .sessionsdto import SessionsDTO, SessionsDTOTypedDict
 from .sessionstream import SessionStream, SessionStreamTypedDict
 from .statuseventdatadto import StatusEventDataDTO, StatusEventDataDTOTypedDict
 from .statuseventdatastatusfield import StatusEventDataStatusField
@@ -115,14 +117,16 @@ __all__ = [
     "JSONPatchOperationDTOTypedDict",
     "ListSessionEventsRequest",
     "ListSessionEventsRequestTypedDict",
+    "ListSessionsRequest",
+    "ListSessionsRequestTypedDict",
     "Loc",
     "LocTypedDict",
     "MessageEventDataDTO",
     "MessageEventDataDTOTypedDict",
     "Mode",
     "Op",
-    "Parts",
-    "PartsTypedDict",
+    "Part",
+    "PartTypedDict",
     "ReasoningPartDTO",
     "ReasoningPartDTOTypedDict",
     "RetrieveAgentRequest",
@@ -135,6 +139,8 @@ __all__ = [
     "SessionDTOTypedDict",
     "SessionStream",
     "SessionStreamTypedDict",
+    "SessionsDTO",
+    "SessionsDTOTypedDict",
     "StatusEventDataDTO",
     "StatusEventDataDTOTypedDict",
     "StatusEventDataStatusField",

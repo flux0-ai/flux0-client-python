@@ -6,6 +6,7 @@
 ### Available Operations
 
 * [create](#create) - Create a new session
+* [list](#list) - List Sessions
 * [retrieve](#retrieve) - Retrieve Session
 * [create_event](#create_event) - Create and stream session events
 * [list_events](#list_events) - List Events
@@ -51,6 +52,45 @@ with Flux0Client() as fc_client:
 | Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | models.APIError | 4XX, 5XX        | \*/\*           |
+
+## list
+
+Retrieve all sessions that match the given filters.
+
+Filters can be applied using agent_id. If no filters are specified, all sessions will be returned.
+
+### Example Usage
+
+```python
+from flux0_client import Flux0Client
+
+
+with Flux0Client() as fc_client:
+
+    res = fc_client.sessions.list(agent_id="t5ul4jGZjb")
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         | Example                                                             |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `agent_id`                                                          | *OptionalNullable[str]*                                             | :heavy_minus_sign:                                                  | N/A                                                                 | t5ul4jGZjb                                                          |
+| `retries`                                                           | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)    | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |                                                                     |
+
+### Response
+
+**[models.SessionsDTO](../../models/sessionsdto.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| models.HTTPValidationError | 422                        | application/json           |
+| models.APIError            | 4XX, 5XX                   | \*/\*                      |
 
 ## retrieve
 

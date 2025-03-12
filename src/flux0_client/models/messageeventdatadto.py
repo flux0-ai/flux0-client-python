@@ -19,13 +19,13 @@ from typing import Dict, List, Literal, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 
 
-PartsTypedDict = TypeAliasType(
-    "PartsTypedDict",
+PartTypedDict = TypeAliasType(
+    "PartTypedDict",
     Union[ContentPartDTOTypedDict, ReasoningPartDTOTypedDict, ToolPartDTOTypedDict],
 )
 
 
-Parts = Annotated[
+Part = Annotated[
     Union[
         Annotated[ContentPartDTO, Tag("content")],
         Annotated[ReasoningPartDTO, Tag("reasoning")],
@@ -36,7 +36,7 @@ Parts = Annotated[
 
 
 class MessageEventDataDTOTypedDict(TypedDict):
-    parts: List[PartsTypedDict]
+    parts: List[PartTypedDict]
     type: Literal["message"]
     tags: NotRequired[Nullable[List[str]]]
     flagged: NotRequired[Nullable[bool]]
@@ -44,7 +44,7 @@ class MessageEventDataDTOTypedDict(TypedDict):
 
 
 class MessageEventDataDTO(BaseModel):
-    parts: List[Parts]
+    parts: List[Part]
 
     TYPE: Annotated[
         Annotated[Literal["message"], AfterValidator(validate_const("message"))],
